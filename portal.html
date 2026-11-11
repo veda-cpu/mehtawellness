@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b1b">
+  <title>Care Workspace | Dr Mehta Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark"><i></i><i></i><i></i></span><span>dr mehta <b>wellness</b></span></a>
+    <div class="workspace-label">CARE WORKSPACE</div>
+    <div class="role-box"><label for="roleSelect">VIEW AS</label><select id="roleSelect"><option value="admin">Administrator</option><option value="doctor">Doctor</option><option value="nutritionist">Nutritionist</option><option value="yoga">Yoga instructor</option></select></div>
+    <nav class="side-nav">
+      <button class="nav-item active" data-view="overview"><span>▦</span> Overview</button>
+      <button class="nav-item" data-view="patients"><span>♙</span> Patients <small>24</small></button>
+      <button class="nav-item" data-view="records"><span>▤</span> Medical records</button>
+      <button class="nav-item" data-view="nutrition"><span>◒</span> Nutrition plans</button>
+      <button class="nav-item" data-view="yoga"><span>✺</span> Yoga progress</button>
+      <button class="nav-item" data-view="meditation"><span>☼</span> Meditation</button>
+      <button class="nav-item" data-view="timeline"><span>◷</span> Care timeline</button>
+      <button class="nav-item" data-view="team"><span>⌘</span> Team access</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="privacy"><span>✦</span><div><b>Privacy comes first</b><small>Demo workspace · Sample data only</small></div></div><a class="back-link" href="index.html">← Back to website</a></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="crumb">Workspace <span>/</span> <b id="crumbTitle">Overview</b></div><div class="top-actions"><span class="secure"><i></i> Demo environment</span><button class="icon-btn" aria-label="Notifications">♧<em></em></button><div class="profile"><div class="avatar">DM</div><div><b>Dr. Mehta</b><small id="roleName">Administrator</small></div><span>⌄</span></div></div></header>
+    <section class="page-head"><div><div class="eyebrow">WEDNESDAY, 11 NOVEMBER 2026</div><h1 id="pageTitle">Good morning, Dr. Mehta <span>✦</span></h1><p id="pageSubtitle">Here’s what’s happening across your care team today.</p></div><button class="primary-btn" id="addPatient">＋ Add patient</button></section>
+
+    <section class="view active-view" id="overviewView">
+      <div class="summary-grid">
+        <article class="summary-card"><div class="summary-top"><span>TOTAL PATIENTS</span><i>♙</i></div><strong>248</strong><small><b>↗ 8.4%</b> vs last month</small><div class="sparkline"><i style="height:30%"></i><i style="height:45%"></i><i style="height:36%"></i><i style="height:62%"></i><i style="height:53%"></i><i style="height:78%"></i><i style="height:92%"></i></div></article>
+        <article class="summary-card"><div class="summary-top"><span>CONSULTATIONS</span><i>✚</i></div><strong>36</strong><small><b>12 scheduled</b> for today</small><div class="sparkline green"><i style="height:55%"></i><i style="height:40%"></i><i style="height:72%"></i><i style="height:60%"></i><i style="height:88%"></i><i style="height:65%"></i><i style="height:100%"></i></div></article>
+        <article class="summary-card"><div class="summary-top"><span>WELLNESS CHECK-INS</span><i>♡</i></div><strong>184</strong><small><b>↗ 12 new</b> this week</small><div class="sparkline gold"><i style="height:38%"></i><i style="height:56%"></i><i style="height:47%"></i><i style="height:72%"></i><i style="height:68%"></i><i style="height:86%"></i><i style="height:100%"></i></div></article>
+        <article class="summary-card"><div class="summary-top"><span>TEAM UPDATES</span><i>⌘</i></div><strong>27</strong><small><b>5 pending</b> review</small><div class="sparkline purple"><i style="height:45%"></i><i style="height:35%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:75%"></i><i style="height:70%"></i><i style="height:100%"></i></div></article>
+      </div>
+      <div class="content-grid">
+        <article class="panel patient-panel"><div class="panel-heading"><div><h2>Patient directory</h2><p>Quick access to your patients’ care profiles</p></div><button class="plain-btn" data-jump="patients">View all ↗</button></div>
+          <div class="searchbar"><span>⌕</span><input id="patientSearch" placeholder="Search patient name or unique ID..."><kbd>⌘ K</kbd></div>
+          <div class="table-wrap"><table><thead><tr><th>PATIENT</th><th>PATIENT ID</th><th>CARE STATUS</th><th>LAST VISIT</th><th></th></tr></thead><tbody id="patientRows">
+            <tr><td><div class="person"><span class="person-avatar sage">AM</span><span><b>Alex Morgan</b><small>alex.morgan@email.com</small></span></div></td><td>DM-2048</td><td><span class="pill active">On track</span></td><td>10 Nov 2026</td><td><button class="more" aria-label="Open patient">↗</button></td></tr>
+            <tr><td><div class="person"><span class="person-avatar peach">SP</span><span><b>Sophia Patel</b><small>sophia.p@email.com</small></span></div></td><td>DM-2047</td><td><span class="pill review">Needs review</span></td><td>09 Nov 2026</td><td><button class="more" aria-label="Open patient">↗</button></td></tr>
+            <tr><td><div class="person"><span class="person-avatar lilac">JR</span><span><b>James Robinson</b><small>j.robinson@email.com</small></span></div></td><td>DM-2046</td><td><span class="pill active">On track</span></td><td>08 Nov 2026</td><td><button class="more" aria-label="Open patient">↗</button></td></tr>
+            <tr><td><div class="person"><span class="person-avatar blue">AK</span><span><b>Aisha Khan</b><small>aisha.k@email.com</small></span></div></td><td>DM-2045</td><td><span class="pill pending">Follow-up</span></td><td>06 Nov 2026</td><td><button class="more" aria-label="Open patient">↗</button></td></tr>
+          </tbody></table></div>
+        </article>
+        <article class="panel activity-panel"><div class="panel-heading"><div><h2>Recent activity</h2><p>Latest updates from your team</p></div><button class="plain-btn" data-jump="timeline">See timeline ↗</button></div>
+          <div class="activity"><span class="activity-icon nutrition-icon">◒</span><div><b>Nutrition plan updated</b><p>Priya Shah updated Alex Morgan’s meal plan.</p><small>12 minutes ago</small></div></div>
+          <div class="activity"><span class="activity-icon yoga-icon">✺</span><div><b>Yoga session completed</b><p>Rohan Das marked a session as completed.</p><small>1 hour ago</small></div></div>
+          <div class="activity"><span class="activity-icon doctor-icon">✚</span><div><b>Consultation notes added</b><p>Dr. Mehta added notes for Sophia Patel.</p><small>Yesterday, 4:20 PM</small></div></div>
+          <div class="activity"><span class="activity-icon meditation-icon">☼</span><div><b>Meditation check-in</b><p>Aisha logged a 15-minute mindfulness session.</p><small>Yesterday, 9:10 AM</small></div></div>
+        </article>
+      </div>
+      <div class="bottom-grid"><article class="panel"><div class="panel-heading"><div><h2>Today’s care schedule</h2><p>Your team’s upcoming appointments</p></div><span class="date-chip">11 NOV · TODAY</span></div><div class="schedule-row"><time>09:30</time><i class="schedule-dot green-dot"></i><div><b>Initial consultation · Alex Morgan</b><small>Dr. Mehta · Consultation room 1</small></div><span class="pill active">Completed</span></div><div class="schedule-row"><time>11:00</time><i class="schedule-dot gold-dot"></i><div><b>Nutrition follow-up · Sophia Patel</b><small>Priya Shah · Nutrition</small></div><span class="pill pending">Upcoming</span></div><div class="schedule-row"><time>14:30</time><i class="schedule-dot purple-dot"></i><div><b>Yoga progress review · James Robinson</b><small>Rohan Das · Wellness studio</small></div><span class="pill pending">Upcoming</span></div></article>
+      <article class="panel team-panel"><div class="panel-heading"><div><h2>Your care team</h2><p>People supporting patient journeys</p></div><button class="plain-btn" data-jump="team">Manage ↗</button></div><div class="team-member"><span class="person-avatar sage">DM</span><div><b>Dr. Mehta</b><small>Lead physician</small></div><span class="online"></span></div><div class="team-member"><span class="person-avatar peach">PS</span><div><b>Priya Shah</b><small>Nutritionist</small></div><span class="online"></span></div><div class="team-member"><span class="person-avatar lilac">RD</span><div><b>Rohan Das</b><small>Yoga instructor</small></div><span class="online"></span></div></article></div>
+    </section>
+    <section class="view placeholder-view" id="otherView"><div class="placeholder-icon" id="otherIcon">▦</div><div class="eyebrow">CARE WORKSPACE</div><h2 id="otherTitle">Patients</h2><p id="otherDescription">Explore and manage information in one connected patient workspace.</p><div class="placeholder-card"><b id="otherCardTitle">Patient information</b><span>This is an interactive front-end concept using sample data. Connect a secure backend to enable real patient workflows.</span></div></section>
+    <footer class="app-footer"><span>DR MEHTA WELLNESS</span><span>Demo interface · Sample data only · Not for clinical decisions</span></footer>
+  </main>
+</div>
+<div class="modal-backdrop" id="modal"><div class="modal"><button class="modal-close" id="closeModal">×</button><div class="eyebrow">NEW PATIENT</div><h2>Add a patient</h2><p>Preview form — entries are not saved to a database.</p><label>Patient full name<input id="newName" placeholder="Enter patient name"></label><label>Unique patient ID<input id="newId" placeholder="e.g. DM-2049"></label><label>Email address<input id="newEmail" type="email" placeholder="name@example.com"></label><button class="primary-btn full" id="savePatient">Add to demo list</button><small class="modal-foot">Use fictional data only in this demo.</small></div></div>
+<script src="portal.js"></script>
+</body></html>
