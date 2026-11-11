@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173923">
+<title>Dr Mehta Wellness | Mobile App Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+<div class="phone-shell">
+  <div class="status"><span>9:41</span><span>●●●  Wi-Fi  ▰</span></div>
+  <header class="app-header">
+    <a class="brand" href="#" aria-label="Dr Mehta Wellness home"><span class="brand-mark"><i></i><i></i><i></i></span><span>dr mehta <b>wellness</b></span></a>
+    <button class="bell" aria-label="Notifications">♧<i></i></button>
+  </header>
+
+  <main>
+    <section class="screen active" id="home">
+      <div class="welcome">
+        <div><div class="eyebrow">WEDNESDAY, 11 NOVEMBER</div><h1>Hello, Alex <span>✦</span></h1><p>Your wellness journey, all in one place.</p></div>
+        <div class="user-avatar">AM</div>
+      </div>
+      <article class="hero-card">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-copy"><span class="tiny-label">YOUR WELLNESS SNAPSHOT</span><h2>Small steps.<br><em>Stronger you.</em></h2><p>You’re building healthy habits. Keep your rhythm going.</p><button class="light-btn" data-go="journey">View my journey <span>↗</span></button></div>
+        <div class="wellness-score"><div class="score-ring"><div><b>82</b><small>GOOD</small></div></div><span>WELLNESS<br>INDEX</span></div>
+        <span class="leaf leaf-a">✦</span><span class="leaf leaf-b">✧</span>
+      </article>
+      <div class="section-title"><div><h2>Your care team</h2><p>Experts supporting your wellbeing</p></div><button class="see-all" data-go="team">See all</button></div>
+      <div class="team-scroll">
+        <article class="expert-card"><div class="expert-avatar doctor">DM</div><div><b>Dr. Mehta</b><small>Physician</small><span class="available">● Available</span></div><span class="expert-arrow">↗</span></article>
+        <article class="expert-card"><div class="expert-avatar nutrition">PS</div><div><b>Priya Shah</b><small>Nutritionist</small><span class="available">● Available</span></div><span class="expert-arrow">↗</span></article>
+        <article class="expert-card"><div class="expert-avatar yoga">RD</div><div><b>Rohan Das</b><small>Yoga instructor</small><span class="available">● Available</span></div><span class="expert-arrow">↗</span></article>
+      </div>
+      <article class="health-glance">
+        <div class="glance-head"><div><span class="tiny-label">HEALTH TRACKING</span><h2>Your health at a glance</h2></div><button class="see-all" data-go="health">View dashboard ↗</button></div>
+        <div class="metric-grid">
+          <div class="metric"><span>Weight</span><b>68.4 <small>kg</small></b><i>↓ 0.6 kg this month</i></div>
+          <div class="metric"><span>BMI</span><b>23.8</b><i class="neutral">Within healthy range*</i></div>
+          <div class="metric"><span>Blood pressure</span><b>118/78</b><i class="neutral">Last recorded</i></div>
+          <div class="metric"><span>Heart rate</span><b>72 <small>bpm</small></b><i class="neutral">Resting</i></div>
+        </div>
+        <div class="device-connect"><span>⌚</span><div><b>Connect your wearable</b><small>Sync steps, sleep and heart rate</small></div><button data-go="health">Connect</button></div>
+      </article>
+      <div class="section-title"><div><h2>Your wellness pillars</h2><p>A balanced approach to feeling your best</p></div></div>
+      <div class="pillar-grid">
+        <button class="pillar" data-go="care"><span class="pillar-icon medical">✚</span><b>Doctor guidance</b><small>Health & consultations</small><span class="pillar-link">Explore ↗</span></button>
+        <button class="pillar" data-go="care"><span class="pillar-icon food">◒</span><b>Nutrition</b><small>Food & daily habits</small><span class="pillar-link">Explore ↗</span></button>
+        <button class="pillar" data-go="care"><span class="pillar-icon yoga-icon">✺</span><b>Yoga</b><small>Movement & flexibility</small><span class="pillar-link">Explore ↗</span></button>
+        <button class="pillar" data-go="care"><span class="pillar-icon mind">☼</span><b>Meditation</b><small>Mindfulness & calm</small><span class="pillar-link">Explore ↗</span></button>
+      </div>
+      <article class="next-card"><div class="next-top"><span class="tiny-label">UP NEXT</span><span class="upcoming">UPCOMING</span></div><div class="next-content"><div class="calendar-icon"><b>14</b><small>NOV</small></div><div><b>Nutrition follow-up</b><small>with Priya Shah · 11:00 AM</small></div><button aria-label="Appointment details" data-go="journey">›</button></div></article>
+    </section>
+
+    <section class="screen" id="health">
+      <div class="page-intro"><div class="eyebrow">YOUR WELLNESS DATA</div><h1>Health dashboard <span>✦</span></h1><p>Track key metrics and notice your progress over time.</p></div>
+      <div class="health-toolbar"><span class="sync-state">● Sample data · Last updated today</span><button id="syncDevice">↻ Sync device</button></div>
+      <div class="health-metrics">
+        <article class="health-metric"><span>Weight</span><b>68.4 <small>kg</small></b><i>↓ 0.6 kg this month</i><div class="spark"><i style="height:38%"></i><i style="height:50%"></i><i style="height:43%"></i><i style="height:64%"></i><i style="height:58%"></i><i style="height:77%"></i><i style="height:68%"></i></div></article>
+        <article class="health-metric"><span>BMI</span><b>23.8</b><i>Within healthy range*</i><div class="range-bar"><i></i></div></article>
+        <article class="health-metric"><span>Blood pressure</span><b>118/78 <small>mmHg</small></b><i>Last recorded · 10 Nov</i><div class="range-bar bp"><i></i></div></article>
+        <article class="health-metric"><span>Heart rate</span><b>72 <small>bpm</small></b><i>Resting · Sample reading</i><div class="spark heart"><i style="height:40%"></i><i style="height:55%"></i><i style="height:46%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:61%"></i><i style="height:48%"></i></div></article>
+      </div>
+      <article class="activity-card"><div class="section-title"><div><h2>Daily activity</h2><p>Illustrative wearable summary</p></div><span class="device-pill">⌚ DEMO</span></div><div class="activity-stats"><div><b>7,842</b><small>Steps</small></div><div><b>6h 52m</b><small>Sleep</small></div><div><b>32 min</b><small>Active time</small></div></div><div class="steps-track"><i></i></div><div class="steps-foot"><span>Step goal · 10,000</span><b>78%</b></div><button class="outline-btn" id="connectWearable">＋ Connect smartwatch / fitness band</button></article>
+      <article class="report-card"><div><span class="tiny-label">PROGRESS REPORT</span><h2>Your monthly health summary</h2><p>Review trends in your recorded measurements with your care team.</p></div><button id="viewReport">View report ↗</button></article>
+      <p class="demo-disclaimer">All health values and wearable readings shown are fictional demo data, not medical advice or a live device connection. BMI ranges and targets should be interpreted by a qualified clinician.</p>
+    </section>
+
+    <section class="screen" id="journey">
+      <div class="page-intro"><div class="eyebrow">YOUR PROGRESS</div><h1>My journey <span>✦</span></h1><p>Every positive choice moves you forward.</p></div>
+      <article class="progress-card"><div><span class="tiny-label">THIS WEEK</span><h2>You’re doing great!</h2><p>You've checked in on 5 of the last 7 days.</p></div><div class="progress-number">5<small>/7 days</small></div><div class="progress-track"><i></i></div><div class="progress-foot"><span>Weekly consistency</span><b>71%</b></div></article>
+      <div class="section-title"><div><h2>Your care timeline</h2><p>Recent milestones from your team</p></div></div>
+      <div class="timeline">
+        <article class="timeline-item"><span class="time-dot green"></span><div><small>10 NOV · 10:30 AM</small><b>Doctor consultation completed</b><p>Dr. Mehta added your follow-up notes and health recommendations.</p><span class="timeline-tag">Doctor guidance</span></div></article>
+        <article class="timeline-item"><span class="time-dot orange"></span><div><small>09 NOV · 04:15 PM</small><b>Your nutrition plan was updated</b><p>Priya shared a refreshed meal plan for the week.</p><span class="timeline-tag">Nutrition</span></div></article>
+        <article class="timeline-item"><span class="time-dot purple"></span><div><small>08 NOV · 07:00 AM</small><b>Yoga session completed</b><p>30-minute guided flexibility and breathing practice.</p><span class="timeline-tag">Yoga</span></div></article>
+        <article class="timeline-item"><span class="time-dot teal"></span><div><small>07 NOV · 09:00 PM</small><b>Mindfulness check-in</b><p>You completed a 15-minute meditation session.</p><span class="timeline-tag">Meditation</span></div></article>
+      </div>
+    </section>
+
+    <section class="screen" id="care">
+      <div class="page-intro"><div class="eyebrow">YOUR PERSONAL PLAN</div><h1>Care & plans <span>✦</span></h1><p>Guidance from your complete wellness team.</p></div>
+      <div class="care-tabs"><button class="care-tab selected" data-tab="doctor-plan">Doctor</button><button class="care-tab" data-tab="nutrition-plan">Nutrition</button><button class="care-tab" data-tab="yoga-plan">Yoga</button><button class="care-tab" data-tab="mind-plan">Mind</button></div>
+      <article class="plan-panel plan-active" id="doctor-plan"><div class="plan-head"><span class="pillar-icon medical">✚</span><span class="plan-status">UPDATED 10 NOV</span></div><h2>Doctor guidance</h2><p>Your latest consultation summary and care recommendations.</p><div class="plan-detail"><b>Consultation summary</b><span>Routine follow-up completed. Continue your current wellness routine and review progress at your next visit.</span></div><div class="plan-detail"><b>Next follow-up</b><span>14 November 2026 · 10:30 AM</span></div><button class="outline-btn" data-go="journey">View consultation timeline ↗</button></article>
+      <article class="plan-panel" id="nutrition-plan"><div class="plan-head"><span class="pillar-icon food">◒</span><span class="plan-status">UPDATED 09 NOV</span></div><h2>Nutrition plan</h2><p>A simple daily rhythm to support balanced eating.</p><div class="meal"><span>08:00 AM</span><div><b>Breakfast</b><small>Seasonal fruit · Whole grains</small></div></div><div class="meal"><span>01:00 PM</span><div><b>Lunch</b><small>Balanced plate · Vegetables · Protein</small></div></div><div class="meal"><span>07:30 PM</span><div><b>Dinner</b><small>Light, nourishing meal</small></div></div><div class="nutrition-summary"><div class="summary-line"><b>Today's nutrition</b><span>Sample log</span></div><div class="calorie-total"><strong>1,420</strong><small> / 1,800 kcal</small></div><div class="calorie-track"><i></i></div><div class="macro-row"><span>Protein <b>68g</b></span><span>Carbs <b>154g</b></span><span>Fat <b>46g</b></span></div><div class="meal-log"><div><b>Breakfast</b><small>Oats, fruit · 320 kcal</small><span>✓ Logged</span></div><div><b>Lunch</b><small>Balanced plate · 510 kcal</small><span>✓ Logged</span></div><div><b>Evening snack</b><small>Yogurt & nuts · 180 kcal</small><span>+ Add</span></div></div><button class="outline-btn" id="logMeal">＋ Log a meal</button></div><button class="outline-btn" data-go="journey">See nutrition updates ↗</button></article>
+      <article class="plan-panel" id="yoga-plan"><div class="plan-head"><span class="pillar-icon yoga-icon">✺</span><span class="plan-status">THIS WEEK</span></div><h2>Yoga practice</h2><p>Your instructor's suggested practice schedule.</p><div class="practice-row"><b>3 sessions</b><span>Completed this week</span></div><div class="practice-row"><b>2 sessions</b><span>Suggested next</span></div><div class="yoga-week"><b>This week's practice</b><div class="week-days"><span class="done">M<small>✓</small></span><span class="done">T<small>✓</small></span><span>W<small>•</small></span><span class="done">T<small>✓</small></span><span>F<small>○</small></span><span>S<small>○</small></span><span>S<small>○</small></span></div></div><div class="plan-detail"><b>Next guided session</b><span>Friday · 7:00 AM · Gentle flexibility flow · 30 minutes</span></div><button class="outline-btn" data-go="journey">View yoga progress ↗</button></article>
+      <article class="plan-panel" id="mind-plan"><div class="plan-head"><span class="pillar-icon mind">☼</span><span class="plan-status">YOUR ROUTINE</span></div><h2>Meditation</h2><p>Make space for a calmer, more mindful day.</p><div class="practice-row"><b>15 minutes</b><span>Last session · Yesterday</span></div><div class="practice-row"><b>Evening calm</b><span>Suggested guided practice</span></div><button class="outline-btn" data-go="journey">View mindfulness history ↗</button></article>
+    </section>
+
+    <section class="screen" id="team">
+      <div class="page-intro"><div class="eyebrow">PEOPLE WHO SUPPORT YOU</div><h1>Your care team <span>✦</span></h1><p>A connected team, working around your wellbeing.</p></div>
+      <article class="team-profile"><div class="expert-avatar doctor big">DM</div><div><b>Dr. Mehta</b><small>Lead physician</small><p>Medical guidance and consultation notes.</p><span class="available">● Available for follow-up</span></div><button>↗</button></article>
+      <article class="team-profile"><div class="expert-avatar nutrition big">PS</div><div><b>Priya Shah</b><small>Nutritionist</small><p>Nutrition plans and healthy eating support.</p><span class="available">● Available for follow-up</span></div><button>↗</button></article>
+      <article class="team-profile"><div class="expert-avatar yoga big">RD</div><div><b>Rohan Das</b><small>Yoga instructor</small><p>Movement, flexibility and session progress.</p><span class="available">● Available for follow-up</span></div><button>↗</button></article>
+      <article class="team-profile"><div class="expert-avatar mind big">MC</div><div><b>Maya Chen</b><small>Meditation guide</small><p>Mindfulness practices and reflection.</p><span class="available">● Available for follow-up</span></div><button>↗</button></article>
+      <article class="message-card"><div><span class="tiny-label">STAY CONNECTED</span><h2>Updates from your team</h2><p>Questions about your plan? Send a note to your care team.</p></div><button id="messageTeam">Message care team ↗</button></article>
+      <div class="privacy-note"><span>✦</span><div><b>Your health, handled with care</b><p>Your care team should only access information needed for their role. This preview uses fictional sample details.</p></div></div>
+    </section>
+
+    <section class="screen" id="profile">
+      <div class="page-intro"><div class="eyebrow">YOUR ACCOUNT</div><h1>My profile <span>✦</span></h1><p>Your personal details and preferences.</p></div>
+      <article class="profile-card"><div class="user-avatar large">AM</div><h2>Alex Morgan</h2><p>Patient ID · DM-2048</p><span class="profile-badge">WELLNESS MEMBER</span></article>
+      <div class="settings-list"><button><span>♙</span><div><b>Personal information</b><small>Name, contact and basic details</small></div><i>›</i></button><button><span>▤</span><div><b>Health records</b><small>Your shared reports and history</small></div><i>›</i></button><button><span>♧</span><div><b>Notifications</b><small>Reminders and care updates</small></div><i>›</i></button><button><span>⌑</span><div><b>Privacy & support</b><small>Help, permissions and support</small></div><i>›</i></button></div>
+      <p class="demo-disclaimer">Mobile app concept · Sample patient profile · Not connected to a live medical record.</p>
+    </section>
+  </main>
+
+  <div class="demo-modal" id="demoModal" aria-hidden="true"><div class="modal-backdrop" data-close></div><div class="modal-box"><button class="modal-close" data-close aria-label="Close">×</button><span class="tiny-label" id="modalKicker">DEMO INTERACTION</span><h2 id="modalTitle">Coming soon</h2><p id="modalText">This is a concept preview. Live integrations will be connected during product development.</p><button class="outline-btn" data-close>Got it</button></div></div>
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <button class="tab active" data-screen="home"><span>⌂</span><small>Home</small></button>
+    <button class="tab" data-screen="health"><span>♡</span><small>Health</small></button>
+    <button class="tab" data-screen="care"><span>✚</span><small>Care plans</small></button>
+    <button class="tab" data-screen="team"><span>♙</span><small>My team</small></button>
+    <button class="tab" data-screen="profile"><span>○</span><small>Profile</small></button>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+<script src="mobile.js"></script>
+</body></html>

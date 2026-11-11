@@ -2,3 +2,48 @@
 @media(max-width:1150px){.app{grid-template-columns:220px 1fr}.main{padding:0 23px}.content-grid,.bottom-grid{grid-template-columns:1fr}.summary-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.app{display:block}.sidebar{position:relative;height:auto;min-height:0;padding:17px;display:block}.brand{padding:0 5px 15px}.workspace-label,.role-box,.sidebar-bottom{display:none}.side-nav{display:flex;overflow:auto;padding-bottom:3px}.nav-item{white-space:nowrap;padding:9px}.nav-item small{display:none}.main{padding:0 15px}.topbar{height:58px}.secure,.profile>span,.profile>div:not(.avatar){display:none}.top-actions{gap:12px}.page-head{padding:25px 0 18px;align-items:start}.page-head h1{font-size:22px}.page-head p{max-width:230px;line-height:1.5}.primary-btn{padding:10px;font-size:9px;white-space:nowrap}.summary-grid{gap:8px}.summary-card{padding:13px;min-height:118px}.summary-card>strong{font-size:24px}.sparkline{right:11px;bottom:11px}.panel{padding:14px}.panel-heading h2{font-size:12px}.content-grid,.bottom-grid{gap:10px;margin-top:10px}.activity p{line-height:1.5}.app-footer{gap:10px;line-height:1.5}.app-footer span:last-child{text-align:right}.schedule-row{gap:7px}.schedule-row .pill{display:none}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Typography refresh: medium, more readable dashboard text */
+body { font-size: 14px; }
+.workspace-label, .role-box label { font-size: 10px; }
+.nav-item { font-size: 13px; }
+.privacy b { font-size: 11px; }
+.privacy small, .back-link { font-size: 10px; }
+.crumb { font-size: 12px; }
+.secure { font-size: 11px; }
+.profile b { font-size: 12px; }
+.profile small { font-size: 10px; }
+.eyebrow { font-size: 10px; }
+.page-head p { font-size: 12px; }
+.primary-btn { font-size: 12px; }
+.summary-top { font-size: 9px; }
+.summary-card > small { font-size: 10px; }
+.panel-heading h2 { font-size: 15px; }
+.panel-heading p { font-size: 10px; }
+.plain-btn { font-size: 11px; }
+.searchbar input { font-size: 11px; }
+th { font-size: 8px; }
+td { font-size: 10px; }
+.person b, .team-member b { font-size: 11px; }
+.person small, .team-member small { font-size: 9px; }
+.pill { font-size: 9px; }
+.activity b { font-size: 11px; }
+.activity p { font-size: 10px; }
+.activity small { font-size: 9px; }
+.date-chip { font-size: 8px; }
+.schedule-row b { font-size: 10px; }
+.schedule-row small { font-size: 9px; }
+.app-footer { font-size: 8px; }
+.placeholder-view > p { font-size: 13px; }
+.placeholder-card b { font-size: 14px; }
+.placeholder-card span { font-size: 11px; }
+.modal > p { font-size: 11px; }
+.modal label { font-size: 11px; }
+.modal input { font-size: 12px; }
+.modal-foot { font-size: 9px; }
+@media (max-width: 720px) {
+  .nav-item { font-size: 12px; }
+  .page-head p { font-size: 11px; }
+  .panel-heading h2 { font-size: 14px; }
+}
