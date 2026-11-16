@@ -37,3 +37,5 @@ searchButton?.addEventListener('click', () => {
 searchInput?.addEventListener('keydown', event => {
   if (event.key === 'Enter') searchButton?.click();
 });
+
+

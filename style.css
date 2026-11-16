@@ -40,3 +40,430 @@ body { font-size: 16px; }
   .intro-text p { font-size: 15px; }
   .team-card p { font-size: 13px; }
 }
+
+
+/* CharmHealth-inspired hero refresh: light split layout + animated speaking doctor */
+.site-header{
+  background:rgba(255,255,255,.94); color:#10252e; border-bottom:1px solid #e8eeef;
+  box-shadow:0 8px 30px rgba(16,42,53,.035);
+}
+.brand{color:#10252e}
+.brand b{color:#26bda9}
+.nav-links{color:#51636b}
+.nav-links a:hover{color:#18a997}
+.nav-cta{border-color:#cbd7d8;color:#132b34}
+.nav-cta span{color:#19b9a6}
+.menu-toggle{color:#10252e}
+.hero{
+  min-height:790px; padding:142px 7.2% 60px;
+  background:linear-gradient(115deg,#fbfcff 0%,#f7fbff 48%,#fff 100%);
+  color:#101b26; grid-template-columns:1.02fr .98fr; gap:2%;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.48;
+  background:radial-gradient(circle at 80% 35%,rgba(104,122,255,.13),transparent 27%),
+             radial-gradient(circle at 92% 70%,rgba(255,105,154,.13),transparent 24%);
+}
+.hero:after{
+  background-image:radial-gradient(rgba(76,117,168,.13) .8px,transparent .8px);
+  background-size:20px 20px;mask-image:linear-gradient(90deg,transparent 20%,#000 100%);opacity:.28;
+}
+.hero-copy{max-width:650px;padding:0 0 45px;position:relative;z-index:3}
+.eyebrow{color:#209f92;font-size:11px;letter-spacing:2.4px}
+.eyebrow i{background:#26bda9}
+.hero h1{font-size:clamp(48px,5.1vw,76px);line-height:1.12;letter-spacing:-3.8px;color:#10151c;margin:28px 0 24px;font-weight:800}
+.hero h1 em{color:#25c6b2}
+.hero-lead{max-width:590px;color:#52616b;font-size:18px;line-height:1.8}
+.hero-services{color:#536570;font-size:15px;line-height:1.8}
+.hero-services span{color:#22b7a5;padding:0 5px}
+.button-primary{background:#c9edb4;color:#18352d;box-shadow:0 10px 25px rgba(120,180,100,.12)}
+.button-primary:hover{box-shadow:0 14px 30px rgba(80,150,100,.2)}
+.text-link{color:#344b56}
+.text-link span{color:#20b9a5}
+.trust-line{color:#61747c}
+.trust-line strong{color:#213b42}
+.avatar-stack b{border-color:#fff}
+.hero-art.hero-doctor{height:590px;min-width:0;position:relative;isolation:isolate;transform:none;overflow:visible}
+.doctor-blob{position:absolute;z-index:-1;border-radius:42% 58% 55% 45%;filter:drop-shadow(0 20px 28px rgba(80,100,170,.12));animation:blobDrift 9s ease-in-out infinite}
+.blob-blue{width:390px;height:390px;right:12%;top:9%;background:#6f7cff;transform:rotate(18deg)}
+.blob-pink{width:340px;height:340px;right:1%;top:29%;background:#f77e9f;transform:rotate(-22deg);animation-delay:-3s}
+.doctor-glow{position:absolute;width:72%;height:76%;right:4%;bottom:0;border-radius:50%;background:radial-gradient(ellipse,rgba(86,111,255,.16),transparent 68%);filter:blur(15px)}
+.doctor-speaking{position:absolute;z-index:2;right:6%;bottom:-4px;height:112%;width:auto;max-width:88%;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 18px 20px rgba(27,44,65,.16));animation:doctorFloat 5s ease-in-out infinite}
+.wave-lines{position:absolute;z-index:0;left:-28%;right:-18%;top:18%;height:65%;pointer-events:none;opacity:.7}
+.wave-lines svg{width:100%;height:100%;overflow:visible}
+.wave-lines path{fill:none;stroke:#8ab8ff;stroke-width:1.05;opacity:.58;stroke-dasharray:7 6;animation:waveTravel 13s linear infinite}
+.wave-lines path:nth-child(2n){stroke:#a6a8ff;animation-duration:17s;animation-direction:reverse}
+.speech-card{position:absolute;z-index:4;left:-3%;top:14%;width:245px;padding:17px 19px 15px;background:rgba(255,255,255,.94);border:1px solid #e6ebf3;border-radius:18px;box-shadow:0 18px 48px rgba(35,53,84,.13);backdrop-filter:blur(12px);animation:float 5.5s ease-in-out infinite}
+.speech-card:after{content:"";position:absolute;right:28px;bottom:-9px;width:17px;height:17px;background:#fff;border-right:1px solid #e6ebf3;border-bottom:1px solid #e6ebf3;transform:rotate(45deg)}
+.speech-live{display:flex;align-items:center;gap:8px;color:#84919a;font-size:9px;font-weight:800;letter-spacing:1.5px;margin-bottom:11px}
+.speech-live i{width:7px;height:7px;border-radius:50%;background:#26c5ad;box-shadow:0 0 0 5px rgba(38,197,173,.12)}
+.speech-card strong{display:block;color:#243b47;font:700 14px/1.5 var(--font)}
+.voice-bars{height:20px;display:flex;align-items:center;gap:4px;margin-top:13px}
+.voice-bars i{width:3px;height:6px;border-radius:5px;background:#28bca9;animation:voicePulse .8s ease-in-out infinite alternate}
+.voice-bars i:nth-child(2n){animation-delay:.2s}.voice-bars i:nth-child(3n){animation-delay:.4s}.voice-bars i:nth-child(4n){animation-delay:.1s}
+.doctor-caption{position:absolute;z-index:5;right:1%;bottom:4%;display:flex;align-items:center;gap:11px;padding:12px 17px;background:rgba(255,255,255,.92);border:1px solid #e8edf0;border-radius:15px;box-shadow:0 12px 35px rgba(29,48,68,.1)}
+.caption-plus{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#e1f4e9;color:#329b78;font-size:18px}
+.doctor-caption b,.doctor-caption small{display:block}.doctor-caption b{font:700 12px var(--font);color:#203943}.doctor-caption small{font-size:10px;color:#71818a;margin-top:3px}
+.hero-bottom{color:#82949a}
+.hero-bottom .line{background:#29bda9}
+@keyframes voicePulse{from{height:4px;opacity:.55}to{height:19px;opacity:1}}
+@keyframes waveTravel{to{stroke-dashoffset:-260}}
+@keyframes blobDrift{0%,100%{translate:0 0}50%{translate:0 -15px}}
+@keyframes doctorFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:1050px){
+ .hero{grid-template-columns:1fr .95fr;padding-left:5%;padding-right:5%}
+ .hero-art.hero-doctor{transform:none;height:530px}
+ .blob-blue{width:330px;height:330px}.blob-pink{width:290px;height:290px}
+ .speech-card{left:-8%;width:220px}
+}
+@media(max-width:760px){
+ .site-header{background:rgba(255,255,255,.97)}
+ .nav-links{background:#fff;color:#40545d;box-shadow:0 14px 25px rgba(20,40,60,.08)}
+ .hero{display:flex;flex-direction:column;align-items:stretch;padding:125px 7% 75px;min-height:auto;gap:0}
+ .hero-copy{padding:0}
+ .hero h1{font-size:clamp(43px,10vw,60px);letter-spacing:-2.6px}
+ .hero-lead{font-size:16px}
+ .hero-art.hero-doctor{height:470px;width:100%;margin:18px 0 0;transform:none}
+ .doctor-speaking{height:108%;right:8%;max-width:90%}
+ .blob-blue{width:290px;height:290px;right:12%;top:12%}
+ .blob-pink{width:245px;height:245px;right:0;top:34%}
+ .speech-card{left:0;top:5%;width:205px;padding:13px 15px}
+ .speech-card strong{font-size:12px}
+ .doctor-caption{right:0;bottom:2%;padding:9px 12px}
+ .wave-lines{left:-18%;right:-15%;top:20%;height:65%}
+ .hero-bottom{display:none}
+}
+@media(max-width:420px){
+ .hero-art.hero-doctor{height:390px}
+ .speech-card{width:185px;top:0}
+ .doctor-caption{bottom:0}
+ .blob-blue{width:245px;height:245px}.blob-pink{width:205px;height:205px}
+}
+@media(prefers-reduced-motion:reduce){
+ .doctor-speaking,.doctor-blob,.wave-lines path,.speech-card,.voice-bars i{animation:none!important}
+}
+
+/* Real doctor video in hero section 1 */
+.doctor-video{
+  display:block;object-fit:contain;object-position:center bottom;
+  border:0;background:transparent;mix-blend-mode:multiply;
+}
+.video-sound-toggle{
+  position:absolute;z-index:6;right:2%;top:5%;display:flex;align-items:center;gap:9px;
+  padding:10px 14px;border:1px solid rgba(202,214,225,.9);border-radius:999px;
+  background:rgba(255,255,255,.92);color:#29434b;font:600 11px var(--font);
+  box-shadow:0 8px 24px rgba(31,55,75,.09);cursor:pointer;backdrop-filter:blur(10px);
+}
+.video-sound-toggle span{font-size:16px;color:#20b9a5}
+.video-sound-toggle:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(31,55,75,.13)}
+@media(max-width:760px){
+ .video-sound-toggle{right:0;top:1%;font-size:10px;padding:8px 11px}
+}
+
+.doctor-video{mix-blend-mode:normal!important;}
+
+/* Clean doctor footage: no transparency placeholder, no cutout matte */
+.doctor-video{
+  object-fit:cover;
+  object-position:center top;
+  mix-blend-mode:normal !important;
+  background:#eef3f4;
+  border-radius:26px 26px 0 0;
+  box-shadow:0 22px 55px rgba(29,48,68,.18);
+  outline:1px solid rgba(255,255,255,.75);
+}
+.hero-art.hero-doctor{overflow:hidden;border-radius:28px;isolation:isolate}
+.doctor-glow{z-index:-1}
+@media(max-width:760px){
+ .hero-art.hero-doctor{overflow:hidden;border-radius:24px}
+ .doctor-video{border-radius:22px 22px 0 0}
+}
+
+
+/* Harmonize the doctor footage with the site's soft healthcare palette */
+.hero-art.hero-doctor{
+  background:
+    radial-gradient(ellipse at 68% 38%,rgba(104,124,255,.17),transparent 42%),
+    radial-gradient(ellipse at 84% 72%,rgba(247,126,159,.14),transparent 38%),
+    linear-gradient(135deg,#f8fbff 0%,#f4f9ff 55%,#fff8fb 100%);
+  border:1px solid rgba(219,229,241,.68);
+  border-radius:34px;
+  box-shadow:0 28px 75px rgba(39,66,105,.09);
+  overflow:hidden;
+}
+.hero-art.hero-doctor:before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(94,132,190,.16) .7px,transparent .7px);
+  background-size:18px 18px;opacity:.28;
+}
+.hero-art.hero-doctor .doctor-video{
+  background:transparent;
+  mix-blend-mode:multiply;
+  filter:brightness(1.13) saturate(.78) contrast(.93);
+  border:0;
+  border-radius:28px;
+}
+.hero-art.hero-doctor .doctor-blob{opacity:.92;filter:blur(.2px) drop-shadow(0 18px 28px rgba(80,100,170,.10))}
+.hero-art.hero-doctor .wave-lines{opacity:.8}
+@media(max-width:760px){
+ .hero-art.hero-doctor{border-radius:26px;min-height:450px}
+ .hero-art.hero-doctor .doctor-video{border-radius:24px}
+}
+
+
+/* Static doctor portrait hero: premium healthcare visual */
+.hero-art.hero-portrait{height:590px;position:relative;isolation:isolate;overflow:visible}
+.portrait-frame{
+  position:absolute;z-index:2;right:7%;bottom:0;width:min(76%,430px);height:96%;
+  overflow:hidden;border-radius:48% 48% 24px 24px;
+  background:linear-gradient(145deg,#e9f6f5 0%,#f4f7ff 52%,#fcecf2 100%);
+  box-shadow:0 28px 65px rgba(42,75,108,.18),inset 0 0 0 1px rgba(255,255,255,.85);
+}
+.doctor-portrait{
+  position:absolute;inset:0;width:100%;height:100%;max-width:none;
+  object-fit:cover;object-position:center 16%;
+  mix-blend-mode:multiply;filter:saturate(1.04) contrast(1.02);
+  animation:none;transform:none;
+}
+.portrait-shine{
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(115deg,rgba(255,255,255,.18),transparent 38%,transparent 72%,rgba(35,196,177,.08));
+}
+.hero-portrait .doctor-blob{z-index:-1}
+.hero-portrait .blob-blue{width:380px;height:380px;right:0;top:12%;opacity:.9}
+.hero-portrait .blob-pink{width:280px;height:280px;right:-5%;top:44%;opacity:.88}
+.medical-orbit{position:absolute;z-index:0;border:1px solid rgba(65,172,190,.28);border-radius:50%;transform:rotate(-24deg)}
+.orbit-one{width:500px;height:390px;right:-5%;top:13%}
+.orbit-two{width:560px;height:440px;right:-10%;top:8%;border-style:dashed;opacity:.7}
+.medical-plus{position:absolute;z-index:4;display:grid;place-items:center;border-radius:50%;font-weight:500;color:#fff;background:linear-gradient(135deg,#29c5b0,#4d8fe9);box-shadow:0 12px 28px rgba(39,161,170,.25)}
+.plus-one{width:48px;height:48px;right:2%;top:21%;font-size:30px}
+.plus-two{width:32px;height:32px;left:7%;bottom:27%;font-size:22px;background:linear-gradient(135deg,#9bdcbd,#51bcae)}
+.hero-portrait .doctor-glow{z-index:-1;right:5%;bottom:3%;width:82%;height:70%;background:radial-gradient(ellipse,rgba(65,190,178,.22),rgba(109,134,255,.08) 48%,transparent 72%)}
+.hero-portrait .doctor-caption{right:0;bottom:4%;z-index:5}
+.care-badge{
+  position:absolute;z-index:5;left:-1%;top:19%;display:flex;align-items:center;gap:11px;
+  padding:13px 17px;border:1px solid rgba(224,234,239,.95);border-radius:17px;
+  background:rgba(255,255,255,.94);box-shadow:0 16px 38px rgba(34,64,90,.12);backdrop-filter:blur(12px)
+}
+.care-badge>span{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#e3f7ef;color:#29a88c}
+.care-badge b,.care-badge small{display:block}.care-badge b{font:700 12px var(--font);color:#263f49}.care-badge small{font-size:10px;color:#788b92;margin-top:3px}
+@media(max-width:1050px){
+ .hero-art.hero-portrait{height:530px}
+ .portrait-frame{width:78%;right:5%}
+ .hero-portrait .blob-blue{width:320px;height:320px}
+}
+@media(max-width:760px){
+ .hero-art.hero-portrait{height:450px;width:100%;margin-top:25px}
+ .portrait-frame{height:96%;width:min(78%,360px);right:8%}
+ .doctor-portrait{object-position:center 12%}
+ .care-badge{left:0;top:9%;padding:10px 12px}
+ .hero-portrait .doctor-caption{right:0;bottom:1%;padding:9px 12px}
+ .hero-portrait .blob-blue{width:275px;height:275px;right:9%;top:13%}
+ .hero-portrait .blob-pink{width:220px;height:220px;right:0;top:47%}
+ .medical-orbit{right:-20%;width:420px;height:350px}
+ .plus-one{right:1%;top:20%}
+}
+@media(max-width:420px){
+ .hero-art.hero-portrait{height:390px}
+ .portrait-frame{width:80%;right:7%}
+ .care-badge{top:5%;font-size:11px}
+}
+
+
+/* Client-ready Section 1 refinement */
+.hero{
+  min-height:760px;
+  padding:150px 6.5% 76px;
+  grid-template-columns:minmax(0,1.04fr) minmax(440px,.96fr);
+  gap:4.5%;
+  align-items:center;
+  background:
+    radial-gradient(ellipse at 82% 34%,rgba(110,143,255,.10),transparent 32%),
+    radial-gradient(ellipse at 94% 80%,rgba(255,132,169,.10),transparent 26%),
+    linear-gradient(120deg,#fbfdff 0%,#f5f9ff 52%,#fff 100%);
+}
+.hero-copy{max-width:720px;padding:0 0 28px;z-index:3}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:11px;
+  padding:9px 14px;border:1px solid #dceeea;border-radius:999px;
+  background:rgba(255,255,255,.78);color:#278f83;
+  font:800 10px/1 var(--font);letter-spacing:1.7px;
+  box-shadow:0 6px 20px rgba(42,111,111,.05)
+}
+.kicker-pulse{width:8px;height:8px;border-radius:50%;background:#28bda8;box-shadow:0 0 0 5px rgba(40,189,168,.13)}
+.hero h1{
+  max-width:760px;margin:27px 0 22px;
+  font-size:clamp(52px,4.4vw,70px);line-height:1.08;
+  letter-spacing:-3.4px;font-weight:800;color:#111a24
+}
+.hero h1 em{color:#20bda9;font-style:normal}
+.hero-lead{max-width:650px;color:#526571;font-size:18px;line-height:1.75;margin-bottom:25px}
+.hero-service-chips{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 30px}
+.hero-service-chips span{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 13px;
+  border:1px solid #e1eaf0;border-radius:999px;background:rgba(255,255,255,.82);
+  color:#415865;font-size:12px;font-weight:650;box-shadow:0 5px 16px rgba(31,61,85,.035)
+}
+.hero-service-chips i{font-style:normal;color:#20ad9c;font-size:14px}
+.hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:4px}
+.hero-actions .button-primary{padding:17px 25px;min-height:56px;font-size:14px;box-shadow:0 12px 26px rgba(113,183,124,.16)}
+.hero-actions .button-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(113,183,124,.23)}
+.hero-actions .text-link{font-weight:650;font-size:13px}
+.hero-trust{display:flex;align-items:center;gap:10px;margin-top:30px;color:#71818b;font-size:12px}
+.hero-trust strong{color:#344b56;font-weight:750}
+.trust-mark{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:#e5f6ef;color:#26a88e;font-size:13px}
+.hero-art.hero-portrait{height:600px;min-width:0;margin:0}
+.portrait-frame{
+  right:5%;width:min(76%,450px);height:96%;
+  border-radius:46% 46% 30px 30px;
+  background:linear-gradient(150deg,#e7f4f2,#f1f4ff 58%,#fff0f4);
+  box-shadow:0 30px 75px rgba(47,76,111,.16),inset 0 0 0 1px rgba(255,255,255,.9)
+}
+.doctor-portrait{object-position:center 12%;filter:saturate(1.05) contrast(1.015)}
+.hero-portrait .blob-blue{width:370px;height:370px;right:0;top:13%;opacity:.88}
+.hero-portrait .blob-pink{width:290px;height:290px;right:-4%;top:46%;opacity:.84}
+.hero-portrait .doctor-caption{
+  right:0;bottom:3%;padding:13px 17px;border-radius:17px;
+  box-shadow:0 16px 38px rgba(32,60,83,.12)
+}
+.care-badge{left:-2%;top:18%;padding:14px 18px}
+.medical-orbit{opacity:.65}
+.hero-bottom{bottom:26px;left:6.5%;right:6.5%;color:#91a0a8}
+.hero-bottom .line{background:#a5dcd4}
+@media(max-width:1200px){
+ .hero{grid-template-columns:minmax(0,1fr) minmax(380px,.9fr);gap:2.5%;padding-left:5%;padding-right:5%}
+ .hero h1{font-size:clamp(48px,4.6vw,62px);letter-spacing:-2.8px}
+ .hero-art.hero-portrait{height:540px}
+ .portrait-frame{width:80%;right:2%}
+ .care-badge{left:-5%}
+}
+@media(max-width:760px){
+ .hero{display:flex;flex-direction:column;align-items:stretch;padding:122px 7% 66px;min-height:auto;gap:0}
+ .hero-copy{max-width:none;padding:0}
+ .hero-kicker{font-size:9px;letter-spacing:1.25px}
+ .hero h1{font-size:clamp(43px,9.6vw,58px);line-height:1.1;letter-spacing:-2.4px;margin:22px 0 17px}
+ .hero-lead{font-size:15px;line-height:1.7;margin-bottom:20px}
+ .hero-service-chips{gap:7px;margin-bottom:24px}
+ .hero-service-chips span{font-size:11px;padding:9px 10px}
+ .hero-actions{gap:15px}
+ .hero-actions .button-primary{padding:15px 18px;font-size:12px}
+ .hero-trust{margin-top:22px;font-size:11px}
+ .hero-art.hero-portrait{height:455px;width:100%;margin:25px 0 0}
+ .portrait-frame{height:96%;width:min(78%,360px);right:8%}
+ .care-badge{left:0;top:8%;padding:10px 12px}
+ .care-badge b{font-size:11px}.care-badge small{font-size:9px}
+ .hero-portrait .doctor-caption{right:0;bottom:1%;padding:9px 12px}
+ .hero-bottom{display:none}
+}
+@media(max-width:420px){
+ .hero h1{font-size:42px}
+ .hero-art.hero-portrait{height:390px}
+ .portrait-frame{width:80%;right:7%}
+ .hero-service-chips span{font-size:10px}
+}
+
+
+/* Minimal hero portrait: remove the frame panel and colored blobs */
+.hero-art.hero-portrait{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.hero-art.hero-portrait::before,
+.hero-art.hero-portrait::after{
+  display:none!important;
+  content:none!important;
+}
+.hero-portrait .doctor-blob,
+.hero-portrait .medical-orbit,
+.hero-portrait .medical-plus,
+.hero-portrait .doctor-glow{
+  display:none!important;
+}
+.hero-portrait .portrait-frame{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  inset:auto 5% 0 auto;
+  width:min(76%,450px);
+  height:96%;
+  overflow:hidden;
+  border-radius:46% 46% 0 0;
+}
+.hero-portrait .doctor-portrait{
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  object-fit:cover;
+  object-position:center 12%;
+}
+.hero-portrait .portrait-shine{display:none!important}
+.hero-portrait .wave-lines{
+  opacity:.3;
+  z-index:0;
+}
+@media(max-width:760px){
+  .hero-portrait .portrait-frame{
+    width:min(78%,360px);
+    right:8%;
+    height:96%;
+  }
+}
+
+
+/* True transparent portrait: no image card, frame, clipping or background */
+.hero-portrait .portrait-frame{
+  position:absolute!important;
+  right:3%!important;
+  bottom:0!important;
+  width:min(82%,520px)!important;
+  height:100%!important;
+  overflow:visible!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.hero-portrait .doctor-portrait{
+  position:absolute!important;
+  inset:auto 0 0 auto!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  mix-blend-mode:normal!important;
+  filter:drop-shadow(0 20px 28px rgba(38,65,85,.12))!important;
+}
+.hero-portrait .portrait-shine{display:none!important}
+@media(max-width:760px){
+ .hero-portrait .portrait-frame{
+   right:0!important;width:100%!important;height:100%!important;
+ }
+ .hero-portrait .doctor-portrait{
+   width:100%!important;height:100%!important;object-fit:contain!important;
+ }
+}
+
+
+/* Click-through Medical Guidance service pill */
+.hero-service-chips .hero-service-chip-link{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 13px;
+  border:1px solid #e1eaf0;border-radius:999px;
+  background:rgba(255,255,255,.88);color:#415865;
+  font-size:12px;font-weight:650;text-decoration:none;
+  box-shadow:0 5px 16px rgba(31,61,85,.035);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.hero-service-chips .hero-service-chip-link i{font-style:normal;color:#20ad9c;font-size:14px}
+.hero-service-chips .hero-service-chip-link .chip-arrow{font-size:10px;color:#20ad9c;opacity:0;transform:translate(-3px,3px);transition:.2s}
+.hero-service-chips .hero-service-chip-link:hover{transform:translateY(-2px);border-color:#a9ddd4;box-shadow:0 9px 20px rgba(31,120,110,.1)}
+.hero-service-chips .hero-service-chip-link:hover .chip-arrow{opacity:1;transform:translate(0,0)}
+
+/* Direct navigation targets from the Medical Guidance header */
+#nutrition-team,#yoga-team{scroll-margin-top:110px}
