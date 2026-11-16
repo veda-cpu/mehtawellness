@@ -39,3 +39,21 @@ searchInput?.addEventListener('keydown', event => {
 });
 
 
+
+// Toggle the shared "Our care" dropdown on touch/mobile devices.
+document.querySelectorAll('.nav-dropdown-toggle').forEach(button => {
+  button.addEventListener('click', event => {
+    event.stopPropagation();
+    const dropdown = button.closest('.nav-dropdown');
+    const opened = dropdown.classList.toggle('open');
+    button.setAttribute('aria-expanded', String(opened));
+  });
+});
+document.addEventListener('click', event => {
+  document.querySelectorAll('.nav-dropdown.open').forEach(dropdown => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove('open');
+      dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+    }
+  });
+});

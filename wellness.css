@@ -1,0 +1,155 @@
+
+/* Dr Mehta Wellness – isolated styles for the new Nutrition & Wellness experience */
+:root{--well-ink:#17313c;--well-muted:#687d82;--well-teal:#0ba58f;--well-teal-dark:#087e70;--well-mint:#e9f7f2;--well-blue:#edf6fb;--well-line:#e2ece8;--well-bg:#f8fbfa;--well-white:#fff;--well-lime:#c9edb5;--well-shadow:0 18px 48px rgba(29,67,60,.08)}
+*{box-sizing:border-box}
+body.wellness-page{margin:0;background:var(--well-bg);color:var(--well-ink);font-family:"DM Sans",Arial,sans-serif;font-size:16px}
+.well-wrap{width:min(1200px,calc(100% - 48px));margin:0 auto}
+.well-header{height:78px;background:rgba(255,255,255,.94);border-bottom:1px solid var(--well-line);display:flex;align-items:center;position:sticky;top:0;z-index:30;backdrop-filter:blur(14px)}
+.well-header-inner{width:min(1280px,calc(100% - 48px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.well-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--well-ink);font:800 16px Manrope,Arial,sans-serif;white-space:nowrap}
+.well-mark{display:flex;align-items:end;gap:3px;transform:skew(-18deg)}
+.well-mark i{display:block;width:6px;border-radius:6px;background:var(--well-teal)}
+.well-mark i:nth-child(1){height:14px}.well-mark i:nth-child(2){height:23px}.well-mark i:nth-child(3){height:18px}
+.well-nav{display:flex;align-items:center;gap:24px}
+.well-nav a{font-size:13px;font-weight:650;color:#526b70;text-decoration:none;transition:color .2s}
+.well-nav a:hover,.well-nav a.active{color:var(--well-teal-dark)}
+.well-header-actions{display:flex;align-items:center;gap:9px}
+.well-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:999px;text-decoration:none;border:1px solid transparent;font:750 13px "DM Sans",Arial,sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.well-btn:hover{transform:translateY(-2px)}
+.well-btn-primary{background:var(--well-teal);color:white;box-shadow:0 9px 22px rgba(11,165,143,.17)}
+.well-btn-primary:hover{background:var(--well-teal-dark)}
+.well-btn-soft{background:white;border-color:#dce9e5;color:#36575e}
+.well-btn-lime{background:var(--well-lime);color:#183a34}
+.well-btn-small{padding:10px 14px;font-size:12px}
+.well-eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--well-teal-dark);font-size:10px;font-weight:850;letter-spacing:1.6px;text-transform:uppercase}
+.well-eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--well-teal);box-shadow:0 0 0 5px #dff5ee}
+.well-title{font:800 clamp(36px,5vw,62px)/1.08 Manrope,Arial,sans-serif;letter-spacing:-2.7px;margin:18px 0;color:#152d39}
+.well-title em{font-style:normal;color:var(--well-teal)}
+.well-lead{font-size:17px;line-height:1.75;color:#61777e;max-width:650px}
+.well-section{padding:82px 0}
+.well-section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+.well-section-head h2{font:800 clamp(28px,3.5vw,42px)/1.15 Manrope;margin:12px 0 0;letter-spacing:-1.4px}
+.well-section-head p{max-width:430px;color:var(--well-muted);font-size:14px;line-height:1.7;margin:0}
+.well-hero{padding:68px 0 56px;background:radial-gradient(circle at 78% 38%,#e2f7f1 0,transparent 32%),linear-gradient(120deg,#fbfdfc,#eff7fc)}
+.well-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:50px}
+.well-hero h1{font:800 clamp(40px,5vw,64px)/1.06 Manrope;letter-spacing:-2.8px;margin:18px 0}
+.well-hero h1 em{font-style:normal;color:var(--well-teal)}
+.well-hero-copy .well-lead{margin:0 0 24px}
+.well-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.well-hero-media{position:relative;min-height:440px;display:flex;align-items:center;justify-content:center}
+.well-hero-media:before{content:"";position:absolute;width:min(430px,90%);height:390px;border-radius:48% 52% 46% 54%;background:#dff4ee;transform:rotate(-7deg)}
+.well-hero-media img{position:relative;z-index:1;width:min(100%,510px);height:420px;object-fit:cover;object-position:center;border-radius:46% 46% 22px 22px;mix-blend-mode:multiply}
+.well-float-note{position:absolute;z-index:2;left:0;top:70px;background:white;padding:15px 18px;border-radius:15px;box-shadow:var(--well-shadow);display:flex;align-items:center;gap:12px;font-size:12px;font-weight:800}
+.well-float-note span{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--well-mint);color:var(--well-teal);font-size:18px}
+.well-trust-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:30px;color:#71858a;font-size:12px}
+.well-trust-row b{color:#31545b}
+.well-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.well-pillar{background:#fff;border:1px solid var(--well-line);border-radius:20px;overflow:hidden;box-shadow:0 8px 26px rgba(29,67,60,.035);transition:transform .25s,box-shadow .25s}
+.well-pillar:hover{transform:translateY(-5px);box-shadow:var(--well-shadow)}
+.well-pillar-img{height:205px;overflow:hidden;background:#edf5f2}
+.well-pillar-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.well-pillar:hover img{transform:scale(1.04)}
+.well-pillar-body{padding:23px}
+.well-pillar-body .well-icon{width:42px;height:42px;border-radius:13px;background:var(--well-mint);color:var(--well-teal);display:grid;place-items:center;font-size:20px;margin-bottom:15px}
+.well-pillar h3{font:800 21px Manrope;margin:0 0 9px}
+.well-pillar p{font-size:13px;line-height:1.7;color:var(--well-muted);margin:0 0 16px}
+.well-check-list{list-style:none;padding:0;margin:0 0 19px;display:grid;gap:9px}
+.well-check-list li{font-size:12px;color:#536d72;display:flex;gap:9px;align-items:flex-start}
+.well-check-list li:before{content:"✓";color:var(--well-teal);font-weight:900}
+.well-text-link{color:var(--well-teal-dark);font-weight:800;font-size:12px;text-decoration:none}
+.well-benefit-strip{background:#edf7f4;border-radius:20px;padding:27px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.well-benefit{display:flex;gap:11px;align-items:center}
+.well-benefit i{font-style:normal;width:38px;height:38px;border-radius:12px;background:white;color:var(--well-teal);display:grid;place-items:center;font-size:17px}
+.well-benefit b,.well-benefit small{display:block}
+.well-benefit b{font-size:12px}.well-benefit small{font-size:10px;color:#75898a;margin-top:4px}
+.well-journey-banner{background:#e9f7f2;border-radius:24px;padding:34px 40px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.well-journey-banner h2{font:800 28px Manrope;margin:0 0 7px;letter-spacing:-.8px}
+.well-journey-banner p{margin:0;color:#667e7f;font-size:13px}
+.well-footer{padding:26px 0;border-top:1px solid var(--well-line);color:#829394;font-size:11px}
+.well-footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.well-breadcrumb{font-size:11px;color:#8a9a9a;margin-bottom:16px}.well-breadcrumb a{color:var(--well-teal-dark);text-decoration:none}
+.well-form-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:28px;align-items:start}
+.well-form-aside{background:linear-gradient(145deg,#e6f6f0,#eff7fb);padding:28px;border-radius:20px;position:sticky;top:100px}
+.well-form-aside h2{font:800 26px/1.2 Manrope;margin:15px 0 10px}
+.well-form-aside p{font-size:13px;line-height:1.7;color:#6d8285}
+.well-step{display:flex;gap:10px;align-items:center;margin:19px 0;color:#647a7d;font-size:11px}
+.well-step b{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--well-teal)}
+.well-form-card{background:#fff;border:1px solid var(--well-line);border-radius:20px;padding:32px;box-shadow:var(--well-shadow)}
+.well-form-card h2{font:800 23px Manrope;margin:0 0 6px}
+.well-form-card>p{font-size:12px;color:#7b8d8f;margin:0 0 24px}
+.well-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.well-field{display:grid;gap:7px;margin-bottom:15px}
+.well-field label,.well-field legend{font-size:12px;font-weight:800;color:#3c5960}
+.well-field input,.well-field select,.well-field textarea{width:100%;min-height:47px;border:1px solid #dfe9e5;border-radius:10px;background:white;padding:11px 13px;font:13px "DM Sans";color:var(--well-ink);outline:none}
+.well-field input:focus,.well-field select:focus,.well-field textarea:focus{border-color:#69c9b7;box-shadow:0 0 0 3px #e1f6ef}
+.well-field fieldset{border:0;padding:0;margin:0}
+.well-options{display:flex;flex-wrap:wrap;gap:8px}
+.well-option{position:relative}
+.well-option input{position:absolute;opacity:0;pointer-events:none}
+.well-option span{display:inline-flex;align-items:center;padding:10px 13px;border:1px solid #e0eae6;border-radius:99px;color:#60767a;font-size:11px;font-weight:700;cursor:pointer;background:#fff}
+.well-option input:checked+span{background:#e8f7f2;border-color:#8bd6c6;color:#087f70}
+.well-form-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px}
+.well-hint{font-size:10px;color:#91a09e}
+.well-dashboard-head{background:linear-gradient(110deg,#e8f7f2,#f0f7fb);padding:34px 0 30px}
+.well-dashboard-head-row{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.well-dashboard-head h1{font:800 34px Manrope;letter-spacing:-1.4px;margin:10px 0 6px}
+.well-dashboard-head p{font-size:13px;color:#708487;margin:0}
+.well-dashboard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.well-stat{background:white;border:1px solid #e3eeea;border-radius:15px;padding:17px}
+.well-stat small{font-size:10px;color:#81918f;font-weight:800;letter-spacing:.7px}
+.well-stat strong{display:block;font:800 27px Manrope;margin:8px 0 3px}
+.well-stat span{font-size:10px;color:#7e9291}
+.well-dashboard-content{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;padding:34px 0}
+.well-panel{background:#fff;border:1px solid var(--well-line);border-radius:17px;padding:22px;box-shadow:0 7px 24px rgba(29,67,60,.035);margin-bottom:16px}
+.well-panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.well-panel h2{font:800 18px Manrope;margin:0}
+.well-panel p{font-size:12px;color:#7b8d8e;line-height:1.6}
+.well-meal-row{display:flex;align-items:center;gap:13px;padding:13px 0;border-top:1px solid #edf2ef}
+.well-meal-row:first-of-type{border-top:0}
+.well-meal-thumb{width:58px;height:52px;border-radius:11px;overflow:hidden;flex:0 0 58px;background:#edf5f0}
+.well-meal-thumb img{width:100%;height:100%;object-fit:cover}
+.well-meal-copy{flex:1}.well-meal-copy b{display:block;font-size:12px}.well-meal-copy small{display:block;color:#879794;font-size:10px;margin-top:4px}
+.well-complete{border:1px solid #dcebe5;border-radius:99px;background:white;padding:8px 11px;font:750 10px "DM Sans";color:#4e7770;cursor:pointer}
+.well-complete.done{background:#e7f7f0;color:#07826f;border-color:#cceee1}
+.well-water{display:flex;align-items:center;gap:18px}
+.well-water-count{font:800 34px Manrope;color:var(--well-teal)}
+.well-water-glasses{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}
+.well-water-glasses button{width:27px;height:34px;border:1px solid #cde8e0;border-radius:7px 7px 10px 10px;background:#fff;color:#9ab8b1;cursor:pointer}
+.well-water-glasses button.filled{background:#bcebe0;color:#078b78;border-color:#8ed9ca}
+.well-progress{height:9px;background:#edf2ef;border-radius:99px;overflow:hidden;margin:10px 0}
+.well-progress i{display:block;height:100%;background:linear-gradient(90deg,#1bb79e,#a7e3d3);border-radius:99px;transition:width .3s}
+.well-chart{height:155px;display:flex;align-items:end;gap:12px;padding:12px 4px 0;border-bottom:1px solid #eaf0ed}
+.well-chart span{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:end;height:100%;gap:8px;color:#8a9a98;font-size:10px}
+.well-chart i{display:block;width:min(30px,70%);background:linear-gradient(180deg,#25bca4,#bdeadd);border-radius:7px 7px 3px 3px}
+.well-yoga-feature{display:flex;gap:14px;align-items:center}
+.well-yoga-feature img{width:112px;height:90px;object-fit:cover;border-radius:12px}
+.well-yoga-feature b{font-size:13px;display:block}.well-yoga-feature small{font-size:10px;color:#819290;display:block;margin:5px 0 10px}
+.well-care-mini{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid #edf2ef}
+.well-care-mini img{width:43px;height:43px;object-fit:cover;border-radius:50%}
+.well-care-mini b,.well-care-mini small{display:block}.well-care-mini b{font-size:11px}.well-care-mini small{font-size:10px;color:#879694;margin-top:4px}
+.well-team-tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.well-team-tools input{flex:1;min-width:230px;border:1px solid #dfe9e5;border-radius:11px;padding:13px 15px;font:13px "DM Sans";outline:none}
+.well-filter{border:1px solid #dfe9e5;background:white;color:#5c7478;border-radius:99px;padding:10px 14px;font:700 11px "DM Sans";cursor:pointer}
+.well-filter.active{background:#e6f7f1;border-color:#9bdcca;color:#087f70}
+.well-team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.well-pro-card{background:#fff;border:1px solid var(--well-line);border-radius:17px;overflow:hidden;box-shadow:0 7px 24px rgba(29,67,60,.04);transition:transform .2s}
+.well-pro-card:hover{transform:translateY(-4px)}
+.well-pro-top{height:185px;background:#e9f5f0;overflow:hidden}
+.well-pro-top img{width:100%;height:100%;object-fit:cover;object-position:center 32%}
+.well-pro-body{padding:18px}
+.well-pro-body h3{font:800 17px Manrope;margin:0 0 5px}
+.well-pro-qual{font-size:11px;color:var(--well-teal-dark);font-weight:750}
+.well-pro-body p{font-size:11px;color:#75898b;line-height:1.6;min-height:52px}
+.well-pro-meta{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:#829391;margin:13px 0}
+.well-pro-actions{display:flex;gap:8px}.well-pro-actions .well-btn{flex:1;padding:10px 8px;font-size:10px}
+.well-availability{display:inline-flex;align-items:center;gap:6px;color:#188b76;font-size:10px;font-weight:800}
+.well-availability:before{content:"";width:6px;height:6px;border-radius:50%;background:#1eb38e}
+.well-modal{position:fixed;inset:0;background:rgba(13,34,40,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:80}
+.well-modal.open{display:flex}
+.well-modal-card{background:#fff;border-radius:19px;padding:28px;width:min(460px,100%);box-shadow:0 24px 70px rgba(0,0,0,.2)}
+.well-modal-card h2{font:800 22px Manrope;margin:0 0 8px}
+.well-modal-card p{font-size:13px;color:#718588;line-height:1.65}
+.well-empty{grid-column:1/-1;background:white;border:1px dashed #d8e7e1;border-radius:14px;padding:30px;text-align:center;color:#78908a;font-size:13px}
+@media(max-width:900px){.well-nav{gap:13px}.well-nav a{font-size:11px}.well-hero-grid{gap:20px}.well-hero-media{min-height:360px}.well-hero-media img{height:350px}.well-dashboard-grid{grid-template-columns:repeat(2,1fr)}.well-team-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.well-wrap,.well-header-inner{width:calc(100% - 30px)}.well-header{height:68px}.well-nav{display:none}.well-header-actions .well-btn-soft{display:none}.well-header-actions .well-btn{padding:10px 13px;font-size:11px}.well-hero{padding:42px 0 30px}.well-hero-grid{grid-template-columns:1fr}.well-hero h1{font-size:42px}.well-hero-media{min-height:290px}.well-hero-media:before{height:260px}.well-hero-media img{height:290px;width:100%;max-width:390px}.well-float-note{top:20px;left:0}.well-section{padding:55px 0}.well-section-head{display:block}.well-section-head p{margin-top:12px}.well-pillars{grid-template-columns:1fr}.well-pillar-img{height:190px}.well-benefit-strip{grid-template-columns:repeat(2,1fr);padding:20px}.well-journey-banner{padding:25px;display:block}.well-journey-banner .well-btn{margin-top:18px}.well-form-layout{grid-template-columns:1fr}.well-form-aside{position:static}.well-form-card{padding:23px}.well-form-grid{grid-template-columns:1fr;gap:0}.well-dashboard-head-row{display:block}.well-dashboard-head .well-btn{margin-top:18px}.well-dashboard-grid{grid-template-columns:repeat(2,1fr);gap:9px}.well-stat{padding:13px}.well-stat strong{font-size:23px}.well-dashboard-content{grid-template-columns:1fr;padding-top:22px}.well-team-grid{grid-template-columns:1fr}.well-pro-top{height:210px}.well-pro-actions .well-btn{font-size:11px}.well-title{font-size:39px;letter-spacing:-1.7px}}
+@media(prefers-reduced-motion:reduce){.well-btn,.well-pillar,.well-pillar img,.well-pro-card{transition:none!important}}

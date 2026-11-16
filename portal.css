@@ -47,3 +47,5 @@ td { font-size: 10px; }
   .page-head p { font-size: 11px; }
   .panel-heading h2 { font-size: 14px; }
 }
+
+.portal-auth-links{display:flex;gap:8px;margin-left:auto;margin-right:16px}.portal-auth-links a{font-size:9px;font-weight:700;color:#087f72;text-decoration:none;padding:8px 12px;border:1px solid #dce9e5;border-radius:99px;background:#fff}.topbar{gap:12px}

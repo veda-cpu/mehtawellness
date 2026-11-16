@@ -74,6 +74,54 @@ footer{padding:18px 0 26px;color:#8a9aa2;font-size:10px}.footer-inner{display:fl
  .medical-site-header .nav-cta{font-size:10px!important;padding:10px 12px!important}
 }
 
+
+/* One consistent "Our care" dropdown shared by every page */
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-dropdown-toggle{appearance:none;border:0;background:transparent;color:inherit;font:inherit;font-size:12px;font-weight:600;
+  display:inline-flex;align-items:center;gap:7px;padding:10px 12px;cursor:pointer;white-space:nowrap}
+.dropdown-chevron{font-size:15px;color:#35d6c0;transition:transform .2s}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:0;min-width:205px;padding:8px;background:#fff;
+  border:1px solid #e5eef0;border-radius:14px;box-shadow:0 16px 36px rgba(18,48,63,.14);
+  display:none;flex-direction:column;gap:3px;z-index:100}
+.nav-dropdown-menu:before{content:"";position:absolute;left:0;right:0;top:-13px;height:14px}
+.nav-dropdown-menu a{display:block;padding:11px 12px;border-radius:9px;color:#304b5b;font-size:12px;font-weight:600;white-space:nowrap}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{background:#e8f8f3;color:#078b79}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu,.nav-dropdown.open .nav-dropdown-menu{display:flex}
+.nav-dropdown:hover .dropdown-chevron,.nav-dropdown.open .dropdown-chevron{transform:rotate(180deg)}
+@media(max-width:760px){
+ .nav-dropdown{display:block;width:100%}
+ .nav-dropdown-toggle{width:100%;justify-content:space-between;text-align:left;padding:0;color:#fff;font-size:13px}
+ .nav-dropdown-menu{position:static;min-width:0;margin-top:10px;padding:6px;background:rgba(255,255,255,.06);
+   border:1px solid rgba(255,255,255,.12);border-radius:12px;box-shadow:none}
+ .nav-dropdown-menu:before{display:none}
+ .nav-dropdown-menu a{color:#d7e5e8;padding:11px 12px}
+ .nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{background:rgba(53,214,192,.13);color:#80ddce}
+ .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:none}
+ .nav-dropdown.open .nav-dropdown-menu{display:flex}
+}
+
+
+@media(max-width:900px){
+ .medical-site-header .nav-dropdown{display:block;width:100%}
+ .medical-site-header .nav-dropdown-toggle{width:100%;justify-content:space-between;text-align:left;padding:12px 14px;color:#344c5b!important;font-size:12px!important}
+ .medical-site-header .nav-dropdown-menu{position:static;min-width:0;margin-top:6px;padding:6px;background:#f8fcfb;
+   border:1px solid #e5eef0;border-radius:12px;box-shadow:none}
+ .medical-site-header .nav-dropdown-menu:before{display:none}
+ .medical-site-header .nav-dropdown-menu a{color:#344c5b;padding:11px 12px}
+ .medical-site-header .nav-dropdown-menu a:hover,.medical-site-header .nav-dropdown-menu a.active{background:#e4f8f2;color:#087f70}
+ .medical-site-header .nav-dropdown:hover .nav-dropdown-menu,.medical-site-header .nav-dropdown:focus-within .nav-dropdown-menu{display:none}
+ .medical-site-header .nav-dropdown.open .nav-dropdown-menu{display:flex}
+}
+
+
+.medical-site-header .auth-header-actions{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.medical-site-header .medical-site-header .auth-header-actions a{font-size:11px;font-weight:700;text-decoration:none;border-radius:99px;padding:10px 15px;transition:.2s}
+.medical-site-header .auth-header-actions .login-link{color:#284858;border:1px solid #dce8e9;background:#fff}
+.medical-site-header .auth-header-actions .signup-link{color:#fff;background:#0aa58f;border:1px solid #0aa58f;box-shadow:0 6px 15px rgba(10,165,143,.14)}
+.medical-site-header .auth-header-actions a:hover{transform:translateY(-2px)}
+@media(max-width:900px){.medical-site-header .auth-header-actions{margin-left:auto;margin-right:10px;gap:5px}.medical-site-header .medical-site-header .auth-header-actions a{padding:9px 11px;font-size:10px}}
+@media(max-width:520px){.medical-site-header .auth-header-actions .login-link{display:none}.medical-site-header .auth-header-actions{margin-right:7px}.medical-site-header .auth-header-actions .signup-link{padding:9px 10px}}
+
 </style>
 </head>
 <body>
@@ -84,15 +132,21 @@ footer{padding:18px 0 26px;color:#8a9aa2;font-size:10px}.footer-inner{display:fl
   </a>
   <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   <nav class="nav-links" aria-label="Main navigation">
-    <a class="active" href="medical-guidance.html">Medical Guidance</a>
-    <a href="index.html#nutrition-team">Nutrition</a>
-    <a href="index.html#yoga-team">Yoga &amp; Wellness</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Our care <span class="dropdown-chevron">⌄</span></button>
+      <div class="nav-dropdown-menu">
+        <a class="active" href="medical-guidance.html">Medical Guidance</a>
+        <a href="index.html#nutrition-team">Nutrition</a>
+        <a href="index.html#yoga-team">Yoga &amp; Wellness</a>
+      </div>
+    </div>
     <a href="index.html#approach">Our approach</a>
     <a href="index.html#ecosystem">The team</a>
     <a href="index.html#platform">Platform</a>
     <a href="index.html#journey">Patient journey</a>
     <a href="portal.html">Team portal ↗</a>
   </nav>
+  <div class="auth-header-actions"><a class="login-link" href="auth.html?mode=login">Login</a><a class="signup-link" href="auth.html?mode=signup">Sign Up</a></div>
   <a class="nav-cta" href="index.html#contact">Let’s connect <span>↗</span></a>
 </header>
 <main>
@@ -124,6 +178,23 @@ footer{padding:18px 0 26px;color:#8a9aa2;font-size:10px}.footer-inner{display:fl
  nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){
    nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');
  });});}
+ document.querySelectorAll('.nav-dropdown-toggle').forEach(function(button){
+   button.addEventListener('click',function(event){
+     event.stopPropagation();
+     var dropdown=button.closest('.nav-dropdown');
+     var opened=dropdown.classList.toggle('open');
+     button.setAttribute('aria-expanded',opened?'true':'false');
+   });
+ });
+ document.addEventListener('click',function(event){
+   document.querySelectorAll('.nav-dropdown.open').forEach(function(dropdown){
+     if(!dropdown.contains(event.target)){
+       dropdown.classList.remove('open');
+       var btn=dropdown.querySelector('.nav-dropdown-toggle');
+       if(btn)btn.setAttribute('aria-expanded','false');
+     }
+   });
+ });
 })();
 </script>
 </body></html>

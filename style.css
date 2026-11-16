@@ -467,3 +467,68 @@ body { font-size: 16px; }
 
 /* Direct navigation targets from the Medical Guidance header */
 #nutrition-team,#yoga-team{scroll-margin-top:110px}
+
+
+/* One consistent "Our care" dropdown shared by every page */
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-dropdown-toggle{appearance:none;border:0;background:transparent;color:inherit;font:inherit;font-size:12px;font-weight:600;
+  display:inline-flex;align-items:center;gap:7px;padding:10px 12px;cursor:pointer;white-space:nowrap}
+.dropdown-chevron{font-size:15px;color:var(--teal);transition:transform .2s}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:0;min-width:205px;padding:8px;background:#fff;
+  border:1px solid #e5eef0;border-radius:14px;box-shadow:0 16px 36px rgba(18,48,63,.14);
+  display:none;flex-direction:column;gap:3px;z-index:100}
+.nav-dropdown-menu:before{content:"";position:absolute;left:0;right:0;top:-13px;height:14px}
+.nav-dropdown-menu a{display:block;padding:11px 12px;border-radius:9px;color:#304b5b;font-size:12px;font-weight:600;white-space:nowrap}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{background:#e8f8f3;color:#078b79}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu,.nav-dropdown.open .nav-dropdown-menu{display:flex}
+.nav-dropdown:hover .dropdown-chevron,.nav-dropdown.open .dropdown-chevron{transform:rotate(180deg)}
+@media(max-width:760px){
+ .nav-dropdown{display:block;width:100%}
+ .nav-dropdown-toggle{width:100%;justify-content:space-between;text-align:left;padding:0;color:#fff;font-size:13px}
+ .nav-dropdown-menu{position:static;min-width:0;margin-top:10px;padding:6px;background:rgba(255,255,255,.06);
+   border:1px solid rgba(255,255,255,.12);border-radius:12px;box-shadow:none}
+ .nav-dropdown-menu:before{display:none}
+ .nav-dropdown-menu a{color:#d7e5e8;padding:11px 12px}
+ .nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{background:rgba(53,214,192,.13);color:#80ddce}
+ .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:none}
+ .nav-dropdown.open .nav-dropdown-menu{display:flex}
+}
+
+
+/* Production-ready, neutral photo treatment for the connected-care pillars */
+.ecosystem{background:#f6f8f7}
+.ecosystem .section-heading h2{color:#142d38}
+.ecosystem .section-heading h2 em{color:#159f91}
+.ecosystem .team-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
+.ecosystem .team-card{
+  min-height:0!important;padding:0!important;border-radius:18px!important;overflow:hidden;
+  background:#fff!important;border:1px solid #e7ece9;box-shadow:0 5px 18px rgba(26,54,49,.045);
+  transform:none;display:flex;flex-direction:column
+}
+.ecosystem .team-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(26,54,49,.10)}
+.ecosystem .pillar-photo{height:190px;position:relative;overflow:hidden;background:#e9efeb}
+.ecosystem .pillar-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .55s ease}
+.ecosystem .team-card:hover .pillar-photo img{transform:scale(1.035)}
+.ecosystem .pillar-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,31,34,.32),transparent 42%)}
+.ecosystem .pillar-number,.ecosystem .pillar-symbol{position:absolute;z-index:1;top:15px;color:#fff}
+.ecosystem .pillar-number{left:16px;font-size:9px;letter-spacing:1.25px;font-weight:800}
+.ecosystem .pillar-symbol{right:15px;font-size:19px}
+.ecosystem .pillar-content{padding:20px 20px 21px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.ecosystem .pillar-content h3{font-size:20px;line-height:1.2;letter-spacing:-.55px;color:#17313b;margin:0 0 9px}
+.ecosystem .pillar-content p{font-size:13px;line-height:1.65;color:#687a7c;margin:0 0 17px;max-width:36ch}
+.ecosystem .pillar-content .tag-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.ecosystem .pillar-content .tag-row span{background:#f2f5f3!important;color:#657674!important;border:1px solid #e9eeeb;padding:7px 10px;border-radius:99px;font-size:10px}
+.ecosystem .care-note{background:#fff;border:1px solid #e8eeeb;border-radius:16px;padding:20px 23px;margin-top:22px}
+.ecosystem .care-note p{color:#697b7b}
+@media(max-width:1050px){.ecosystem .team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ecosystem .pillar-photo{height:210px}}
+@media(max-width:600px){.ecosystem .team-grid{grid-template-columns:1fr;gap:14px}.ecosystem .pillar-photo{height:220px}.ecosystem .pillar-content{padding:18px}.ecosystem .pillar-content h3{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.ecosystem .pillar-photo img{transition:none}.ecosystem .team-card:hover .pillar-photo img{transform:none}}
+
+
+.auth-header-actions{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.auth-header-actions a{font-size:11px;font-weight:700;text-decoration:none;border-radius:99px;padding:10px 15px;transition:.2s}
+.auth-header-actions .login-link{color:#284858;border:1px solid #dce8e9;background:#fff}
+.auth-header-actions .signup-link{color:#fff;background:#0aa58f;border:1px solid #0aa58f;box-shadow:0 6px 15px rgba(10,165,143,.14)}
+.auth-header-actions a:hover{transform:translateY(-2px)}
+@media(max-width:900px){.auth-header-actions{margin-left:auto;margin-right:10px;gap:5px}.auth-header-actions a{padding:9px 11px;font-size:10px}}
+@media(max-width:520px){.auth-header-actions .login-link{display:none}.auth-header-actions{margin-right:7px}.auth-header-actions .signup-link{padding:9px 10px}}
